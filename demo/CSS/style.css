@@ -129,3 +129,74 @@ img {
     left: 50%;
     margin-left: -20px;
 }
+
+/* 轮播图 */
+section {
+    width: 60%;
+    margin: 0 auto;
+}
+section .left {
+    width: 70%;
+    padding-top: 40px;
+}
+section .left .rollpic{
+    position: absolute;
+}
+section .left .rollpic img {
+    position: absolute;
+    width: 625px;
+    height: 270px;
+    border-radius: 12px;
+}
+.btn {
+    width: 625px;
+    position: relative;
+}
+.btn a {
+    position: absolute;
+    top: 110px;                                      /* 定位于.left，picture的height是270，设置height为 270/2 - 25 (自己高度的一半)，即可垂直居中 */
+    width: 40px;
+    height: 50px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 24px;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+.prev {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.next {
+    right: 7px;                                       /* img设置了右padding为7px */     
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;           
+}
+.rollpic:hover .show {
+    display: block;
+}
+.tab {
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    top: 346px;                                        /* 270 + 40 + 56 - 20 */
+    left: 41%;                                         /* 设置section居中后，左右留白为20%，有.left为section(60%浏览器窗口)的70%，故设置 20% + (60%*70%)/2 */
+    margin-left: -90px;                                /* margin-left设置为一半宽的负数使之水平居中 */
+}
+.tab-ul {
+    width: 175px;
+    display: flex;
+}
+.tab-li {
+    padding: 0;
+    width: 30px;
+    height: 3px;
+    background-color: rgba(0,0,0,0.4);
+    margin: 3px 5px;
+    border-radius: 5px;
+}
+.tab-on {
+    background-color: #fff;
+}

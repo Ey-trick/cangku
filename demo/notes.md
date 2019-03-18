@@ -36,3 +36,12 @@
 + `positio`的`absolute`属性,是相对于父元素定位，且该父元素的`position`属性不是`static`(默认值)。
 
 > 故为了使`input`能够居于父元素`form`中间，消除上边距影响；给`input`一个`absolute`的`position`,同时form也使用`position：absolute`。
+
+### DAy 2
+> 轮播图的制作。
+
+search过的知识点：
++ `HTML DOM setInterval()`方法
++ `JavaScript parseInt()` 函数
++ ` onmousemove, onmouseenter 和 onmouseover` 事件
+[demo讲解三者区别](http://www.runoob.com/try/try.php?filename=tryjsref_onmousemove_over_enter "RUNOOB.COM")
