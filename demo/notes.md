@@ -45,3 +45,9 @@ search过的知识点：
 + `JavaScript parseInt()` 函数
 + ` onmousemove, onmouseenter 和 onmouseover` 事件
 [demo讲解三者区别](http://www.runoob.com/try/try.php?filename=tryjsref_onmousemove_over_enter "RUNOOB.COM")
+
+> 轮播图的实现
+1. `js`代码注释已写在`app.js`。 
+2. 遇到的问题：
+  + 最初`.tab`写在`.rollpic`外部，鼠标悬停事件在底层`button`上作用不到，便将其写入内部，更改CSS样式
+  + 在底层`.tab`上选择序列后移走鼠标，会有图片播放错乱出现。于是在`.tab`鼠标悬浮事件的函数末尾加入当前索引赋值给滚动播放做记录的`flag`。
