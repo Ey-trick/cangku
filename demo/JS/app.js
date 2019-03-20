@@ -44,14 +44,12 @@ box[zero].addEventListener('mouseout',function(){
 
 //匹配底层button与img
 for(let i = 0; i < tabs.length; i++){
-  (function(){
     tabs[i].addEventListener('mouseover',function(){
       controler(i);
       changeIcon(i);
       //改变滚动播放索引值
       flag = i;
-    })
-  })()//闭包.
+    })//闭包.
 }
 
 //左右button点击事件

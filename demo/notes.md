@@ -146,6 +146,81 @@ search过的知识点：
   ```
   > 定义了` makeAdder(x) `函数，它接受一个参数` x `，并返回一个新的函数。返回的函数接受一个参数` y`，并返回`x+y`的值。从本质上讲，`makeAdder `是一个函数工厂 — 他创建了将指定的值和它的参数相加求和的函数。`add5 `和` add10` 都是闭包。
 
+  栗子3：(在循环中创建闭包：一个常见错误)
+  ```
+  function showHelp(help) {
+    document.getElementById('help').innerHTML = help;
+  }
+
+  function setupHelp() {
+    var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+    for (var i = 0; i < helpText.length; i++) {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function() {
+        showHelp(item.help);
+      }
+    }
+  }
+
+  setupHelp();
+  ```
+  > 赋值给 onfocus 的是闭包。这些闭包是由他们的函数定义和在 setupHelp 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量item。当onfocus的回调执行时，item.help的值被决定。由于循环在事件触发之前早已执行完毕，变量对象item（被三个闭包所共享）已经指向了helpText的最后一项。
+
+  改进：
+  1. 使用了匿名闭包
+  ```
+  function showHelp(help) {
+    document.getElementById('help').innerHTML = help;
+  }
+
+  function setupHelp() {
+    var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+    for (var i = 0; i < helpText.length; i++) {
+      (function() {
+        var item = helpText[i];
+        document.getElementById(item.id).onfocus = function() {
+          showHelp(item.help);
+        }
+      })(); // 马上把当前循环项的item与事件回调相关联起来
+    }
+  }
+
+  setupHelp();
+  ```
+  2. 避免使用过多的闭包，可以用let关键词：
+  ```
+  function showHelp(help) {
+    document.getElementById('help').innerHTML = help;
+  }
+
+  function setupHelp() {
+    var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+    for (var i = 0; i < helpText.length; i++) {
+      let item = helpText[i];
+      document.getElementById(item.id).onfocus = function() {
+        showHelp(item.help);
+      }
+    }
+  }
+
+  setupHelp();
+  ```
+
 **Section 2.**
 > 瀑布流的实现
 
