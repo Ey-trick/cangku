@@ -1,9 +1,9 @@
-var imgs = document.getElementById("img-ul").getElementsByTagName('a');//获取图片
-var tabs = document.getElementsByClassName("tab-li");//获取底层button
+let imgs = document.getElementById("img-ul").getElementsByTagName('a');//获取图片
+let tabs = document.getElementsByClassName("tab-li");//获取底层button
 //设置循环变量
-var flag = 0;
+let flag = 0;
 //图片自播放
-var timeCount = setInterval(run,2000);
+let timeCount = setInterval(run,2000);
 
 //单个播放函数
 function run(){
@@ -29,7 +29,7 @@ function changeIcon(num){
 }
 
 //手动自动的切换
-var box = document.getElementsByClassName("rollpic");
+let box = document.getElementsByClassName("rollpic");
 const zero = 0;
   //鼠标悬停事件
 box[zero].addEventListener('mouseover',function(){
@@ -44,18 +44,18 @@ box[zero].addEventListener('mouseout',function(){
 
 //匹配底层button与img
 for(let i = 0; i < tabs.length; i++){
-  (function(i){
+  (function(){
     tabs[i].addEventListener('mouseover',function(){
       controler(i);
       changeIcon(i);
       //改变滚动播放索引值
       flag = i;
     })
-  })(i)//闭包，让i在事件触发时，在函数内起作用
+  })()//闭包.
 }
 
 //左右button点击事件
-var btns = document.getElementsByClassName("show");//获取左右两个btn
+let btns = document.getElementsByClassName("show");//获取左右两个btn
 const left = 0;
 const right = 1;
 btns[left].addEventListener('click',function(){
