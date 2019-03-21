@@ -1,0 +1,61 @@
+@media (min-width: 1401px){
+  section{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .left{
+    width: 625px;
+  }
+  section .left .rollpic{
+  height: 270px;
+  }
+  section .right{
+    width: 240px;
+  }
+}
+@media (max-width: 1400px){
+  section{
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  section .left {
+    width: 625px;
+  }
+  section .left .rollpic{
+    height: 270px;
+  }
+  section .right{
+    width: 240px;
+  }
+}
+@media (min-width: 1080px){
+  section{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1080px){
+  section{
+    width: 70%;
+    margin: 0 auto;
+  }
+  section .left{
+    width: 485px;
+  }
+  section .left .rollpic{
+    height: 210px;
+  }
+}
+@media (min-width: 0px) and
+(max-width: 1080px){
+  section{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .right{
+    width: 218px;
+  }
+}

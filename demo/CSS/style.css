@@ -131,21 +131,18 @@ img {
   margin-left: -20px;
   color: white;
 }
-
-/* 轮播图 */
 section {
-  width: 62%;
-  margin: 0 auto;
+  min-width: 785px;
 }
+/* 轮播图 */
 section .left {
   float: left;
-  width: 70%;
   padding-top: 40px;
+  padding-left: 15px;
 }
 section .left .rollpic{
   position: relative;
-  width: 625px;
-  height: 270px;
+  width: 100%;
 }
 .rollpic #img-ul li {
   width: 100%;
@@ -218,8 +215,8 @@ section .left .rollpic img {
 
 .right {
   position: relative;
-  width: 30%;
   padding-top: 40px;
+  margin-left: 40px;
   float: left;
 }
 .wrapper {
