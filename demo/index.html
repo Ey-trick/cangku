@@ -10,40 +10,54 @@
   <link rel="stylesheet" href="./CSS/responsive.css">
 </head>
 <body>
-  <div class="header">
-    <a href="https://www.jianshu.com/" class="home">
-      <img src="./IMG/name.png" alt="Nav logo">
-    </a>
-    <ul class="level-1">
-      <li class="active">
-        <img src="./IMG/home.png" alt="home-page">
-        <a href="#">首页</a>
-      </li>
-      <li class="second">
-        <img src="./IMG/download.png" alt="download" id="download">
-        <a href="#">下载App</a>
-      </li>
-      <li class="search">
-        <form action="" target="_blank" method="GET">
-          <input type="text" placeholder="搜索">
-        </form>
-      </li>
-      <li class="divide touch">
-        <a href="#">Aa</a>
-      </li> 
-      <li class="touch">
-        <a href="#">登录</a>
-      </li>
-      <li class="sign same">
-        <a href="#">注册</a>
-      </li>
-      <li class="towrite same">
-        <a href="#">
-          <i></i>写文章
-        </a>
-      </li>
-    </ul>       
-  </div>
+  <nav>
+    <div class="header">
+      <a href="https://www.jianshu.com/" class="home">
+        <img src="./IMG/name.png" alt="Nav logo">
+      </a>
+      <a href="#" class="towrite same">
+        <i></i>写文章
+      </a>
+      <a href="#" class="sign same">注册</a>
+      <a href="#" class="login">登录</a>
+      <div class="switch-mod">
+        <a href="#" class="mode">Aa</a>
+        <div class="changeShow">
+          <div class="words">
+            <div class="moon" id="Moon"></div>
+            &nbsp;&nbsp;夜间模式
+          </div>
+          <div class="switch">
+            <span class="btnn btn-left" id="on">开</span>
+            <span class="btnn btn-right active" id="off">关</span>
+          </div>
+          <hr>
+          <div class="font-family">
+            <span class="btnn btn-left song">宋体</span>
+            <span class="btnn btn-right hei active">黑体</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="level-1">
+          <li class="active">
+            <a href="#" class="level-2"><img src="./IMG/home.png" alt="home-page"></a> 
+            <a href="#" class="level-3">首页</a>
+          </li>
+          <li class="second">
+            <a href="#" class="level-2"><img src="./IMG/download.png" alt="download" id="download"></a> 
+            <a href="#" class="level-3">下载App</a>
+          </li>
+          <li class="search">
+            <form action="" target="_blank" method="GET">
+              <input type="text" placeholder="搜索">
+            </form>
+          </li>
+        </ul>
+      </div>   
+      </ul>       
+    </div>
+    </nav>
   <section>
     <div class="left">
       <div class="rollpic">
@@ -84,10 +98,10 @@
       </div>                  
       <div class="news">
         <ul>
-          <li>
+          <li class="bull">
             <a href="#" class="title"><strong>这是一个可点击的标题</strong></a>
             <p class="abstract">这是这篇文章的摘要</p>
-            <img src="./IMG/display.jpg" alt="picture">
+            <a href="#" class="pic"><img src="./IMG/display.jpg" alt="picture"></a> 
             <div class="details">
               <span class="active">12.3</span>
               <a href="#">Name</a>
@@ -135,8 +149,10 @@
       </div>
       <a href="#" class="degree">
         <img src="./IMG/2d-code.png" alt="2d-code" class="Dcode">
-        <div class="title">下载简书手机App ></div>
-        <div class="description">随时随地发现和创作内容</div>
+        <div class="info">
+          <div class="title">下载简书手机App ></div>
+          <div class="description">随时随地发现和创作内容</div>
+        </div>
       </a>
       <div class="append">
         <img src="./IMG/2d-code.png" alt="2d-code">
@@ -148,5 +164,6 @@
   </div>
 
   <script src="./JS/app.js"></script>
+  <script src="./JS/switchCSS.js"></script>
 </body>
 </html>
