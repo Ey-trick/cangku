@@ -405,6 +405,7 @@ a.degree:hover+.append {
     border-bottom: 1px solid #eee;
 }
 .news .title {
+  width: 70%;
   height: auto;
   font-size: 20px;
   color: #333;
@@ -422,6 +423,7 @@ a.degree:hover+.append {
   border-radius: 5px;
 }
 .news .abstract {
+  width: 70%;
   font-size: 13px;
   color: #969696;
 }
@@ -454,29 +456,37 @@ a.degree:hover+.append {
   border-radius: 5px;
 }
 .skeleton-title {
-  width: 450px;
+  width: 260px;
   height: 20px;
-  transform-origin: left;
-  animation: skeleton-stretch .8s linear infinite alternate;
 }
 
 .skeleton-content {
-  width: 375px;
+  width: 400px;
   height: 20px;
   margin-top: 10px;
   transform-origin: left;
-  animation: skeleton-stretch .6s -.2s linear infinite alternate;
+  animation: skeleton-stretch2 .4s  linear infinite alternate;
 }
 .skeleton-fixed {
-  width: 260px;
+  width: 375px;
   height: 20px;
   margin-top: 10px;
+  transform-origin: left; 
+  animation: skeleton-stretch1 .4s linear infinite alternate;
 }
-@keyframes skeleton-stretch {
+@keyframes skeleton-stretch1 {
   from {
     transform: scalex(1);
   }
   to {
-    transform: scalex(.3);
+    transform: scalex(.7);
+  }
+}
+@keyframes skeleton-stretch2 {
+  from {
+    transform: scalex(.7);
+  }
+  to {
+    transform: scalex(1);
   }
 }

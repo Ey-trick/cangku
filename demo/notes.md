@@ -265,3 +265,23 @@ search过的知识点：
   1. 怎样在数据加载时显示骨架屏，在加载完成时显示文本？
   2. 找到的关于瀑布流的资料都是写图片加载的，一想到怎么实现数据传输，就又和上面的问题重复了；
   3. 总之明天学学`node.js`和`mongoDB`之类的吧！(但愿学得完...)
+
+### Day 6
+
+> 瀑布流加载的编写
+
++ 学习的内容：
+  1. `Ajax:Asynchronous JavaScript and XML`（异步的` JavaScript `和` XML`）
+    + `AJAX` 不是新的编程语言，而是一种使用现有标准的新方法。最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。
+    + `XMLHttpRequest` 对象: `XMLHttpRequest` 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+      +  `open()` 和 `send()` 方法:
+      ```
+      open(method,url,async) => { method：请求的类型；GET 或 POST | url：文件在服务器上的位置 | async：true（异步）或 false（同步）}
+      send(string) => {将请求发送到服务器。string：仅用于 POST 请求}
+      ```
+  2. `Node.js`
+    + `node.js`跨域设置
+    + `node.js`输出`json`
+  3. 编写过程：
+    + 先是建了一个文件夹，在里面尝试`Node、Ajax`,然后调配`test.html`,让内容能够写入，瀑布流能够实现，最后将结果导入`demo`的`html`。 
+
