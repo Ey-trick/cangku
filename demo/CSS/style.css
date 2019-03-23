@@ -12,6 +12,7 @@ ul {
   list-style: none;                   /*去除ul>li前面的黑点 */
 }
 
+
 /* head */
 nav{
   border-bottom: 0.3px solid rgba(100, 100, 100, 0.5);
@@ -354,7 +355,6 @@ section .left .rollpic img {
   box-sizing: border-box;
   border: 1px solid #eee;
   border-radius: 5px;
-  background-color: #eee;
 }
 .Dcode {
   float: left;
@@ -424,6 +424,7 @@ a.degree:hover+.append {
 }
 .news .abstract {
   width: 70%;
+  line-height: 24px;
   font-size: 13px;
   color: #969696;
 }

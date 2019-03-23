@@ -285,3 +285,24 @@ search过的知识点：
   3. 编写过程：
     + 先是建了一个文件夹，在里面尝试`Node、Ajax`,然后调配`test.html`,让内容能够写入，瀑布流能够实现，最后将结果导入`demo`的`html`。 
 
+### Day 7
+
+> 瀑布流图片的添加
+
+问题与解决：
++ 给`creatElement`出的`img`设置`src`属性，用到`setAttribute()`方法。
+  + 语法：
+  ```
+  element.setAttribute(attributename,attributevalue) (属性名称，属性值)
+  ```
++ 一开始引入的`src`在`node.js`文件里`json`的键`img`的值写的是`//upload-images.jianshu.io/upload_images/blabla..`
+  通过在简书官网中用使用开发者工具调出图片的`src`再复制粘贴到网页搜索栏上，发现：
+  + `//upload-images.jianshu.io/upload_images/blabla..`搜索的是文件协议。
+  + 官网里的图片调去搜索的是`http`协议。
+于是键`img`的值改为`http://upload-images.jianshu.io/upload_images/blabla..`
+
+> 引入瀑布流加载后样式的调试
+
++ `querySelector()`方法改为`getElementsByTagName()`方法。
+
++ 明天还有班级春游...早起写写个人主页吧 —— ——2019.3.24 1:10

@@ -120,6 +120,12 @@
   input{
     box-sizing: border-box;
   }
+  .news .title{
+    font-size: 16px;
+  }
+  .news .abstract{
+    font-size: 12px;
+  }
   .Dcode{
     width: 50px;
     height: 50px;

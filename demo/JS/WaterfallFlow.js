@@ -32,7 +32,7 @@ window.onload = function(){
         let oa = document.createElement('a');
         oa.className = "pic";
         let oImg = document.createElement('img');
-        oImg.src = data1[i].preview;
+        oImg.setAttribute('src',data1[i].img);
         oa.appendChild(oImg); //把当前图片添加到当前a里
         oImg.style.width = '148px';
         oImg.style.height = '100px';

@@ -26,7 +26,7 @@ let Right = document.getElementsByClassName("btn-right");
 let Left = document.getElementsByClassName("btn-left");//改变“关”和“宋体”的bordor
 let list = document.getElementsByClassName("bull");  
 let download = document.getElementsByClassName("level-3");  
-let phat = document.querySelector("strong");
+let phat = document.getElementsByTagName("strong");
 turnOn.addEventListener('click',function(){
   //改变class
   turnOn.className = "btnn btn-left active";
@@ -35,6 +35,7 @@ turnOn.addEventListener('click',function(){
   //改变背景色
   body[0].style.backgroundColor = "#393939";
   document.querySelector("div.changeShow").style.backgroundColor = "#393939";
+  document.querySelector(".degree").style.backgroundColor = "#eee";
   //改变border
   document.querySelector("hr").style.borderTop = "0.5px solid #2f2f2f";
   document.querySelector("nav").style.borderBottom = "0.5px solid #2f2f2f";
@@ -47,7 +48,9 @@ turnOn.addEventListener('click',function(){
   }
   //改变字体颜色
   download[1].style.color = "#969696";
-  phat.style.color = "#969696";
+  for(let i = 0; i < phat.length; i++){
+    phat[i].style.color = "#969696";
+  }
 })
 
 turnOff.addEventListener('click',function(){
@@ -58,6 +61,7 @@ turnOff.addEventListener('click',function(){
   //改变背景色
   body[0].style.backgroundColor = "#fff";
   document.querySelector("div.changeShow").style.backgroundColor = "#fff";
+  document.querySelector(".degree").style.backgroundColor = "#fff";
   //改变border
   document.querySelector("hr").style.borderTop = "1px solid #eee";
   document.querySelector("nav").style.borderBottom = "0.3px solid rgba(100, 100, 100, 0.5)";
@@ -70,5 +74,7 @@ turnOff.addEventListener('click',function(){
   }
   //改变字体颜色
   download[1].style.color = "#333";
-  phat.style.color = "#333";
+  for(let i = 0; i < phat.length; i++){
+    phat[i].style.color = "#333";
+  }
 })
