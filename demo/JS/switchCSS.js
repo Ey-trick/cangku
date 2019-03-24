@@ -2,7 +2,6 @@ let change = document.getElementsByClassName('mode');
 let show = document.getElementsByClassName('changeShow');
 // 点击Aa显示夜间模式和字体的切换
 //,再次点击时隐藏
-
 change[0].addEventListener('click',function(){
   if(show[0].style.display == "block"){
     show[0].style.display = "none";
